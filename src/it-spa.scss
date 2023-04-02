@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import "~bootstrap/scss/bootstrap";
+
+html,
+body {
+    height : 100%;
+    margin : 0;
+    padding: 0;
+}
+///zmienne globalne 
+$mainFontColor: #FFF7E9;
+$primaryColor: #DCDFE5;
+$secondaryColor: #2F61CB;
+$thirdColor: #BD8C4C;
+$forthColor: #3C2B16;
+    .navbar{
+        background-color: #132753;
+        font-size: 0.8rem;
+        letter-spacing: 0.1rem;
+        font-weight: bold;
+        padding-bottom: 0.1rem;
+        padding-left: 0.2rem;
+        top: 0;
+        display: flex;
+        justify-content: space-between;
+        
+        
+        
+        
+      }
+      .navbar-brand > img{
+        height: 3rem;
+       // position: relative;
+        justify-content: center;
+      }
+      
+      .navbar-nav li{
+        padding-right: 0.4rem;
+        
+        color: #00195f;
+        
+      }
+      .navbar .navbar-nav .nav-link{
+        padding-top: 0.4rem;
+        
+      }
+      
+      .navbar .navbar-nav .nav-link:hover{
+        color: $mainFontColor;
+        cursor: pointer;
+      }
+      .navbar-toggler{
+        background-color: #00195f;
+        position: relative;
+        justify-content: center;
+      }
+      .divWelcome{
+        color: $mainFontColor;
+        position: relative;
+      
+
+      }
+
+
+body {
+    background : linear-gradient(50deg, $thirdColor 64%, $primaryColor 80%, $forthColor 100%) no-repeat fixed;
+    font-family: 'Poppins', 'Arial', sans-serif;
+    padding    : 2rem;
+}
+
+nav {
+    
+
+    button,
+    .btn {
+        background   : transparent;
+        border       : 0;
+        border-radius: 0;
+        box-shadow   : none !important;
+        font-size    : 1rem;
+        outline      : none;
+        padding      : 0.5rem 1rem;
+        color: $mainFontColor;
+        cursor: pointer;
+
+        &:active,
+        &:focus,
+        &:hover {
+            background: transparent;
+            
+        }
+    }
+
+    .btn.btn-active {
+        background-color: #1a1710;
+        text-decoration : underline;
+    }
+}
+td,tr,th{
+    color:#d3d1d1;
+}
+
+
+
+main {
+    
+.authInfoPanel, .regInfoPanel{
+    color: red;
+}
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        margin: 3rem 0;
+        color: #131111;
+    }
+
+    p {
+        margin: 1rem 0;
+    }
+
+    ul {
+        list-style: none;
+        padding   : 0;
+
+        li {
+            background-color: #f39b04;
+            box-shadow      : #eb8212 0 2px 8px 2px;
+            color           : #030202;
+            padding         : 1rem;
+
+            footer {
+                display        : flex;
+                align-items    : center;
+                justify-content: flex-end;
+
+                &>*+* {
+                    margin-left: 1rem;
+                }
+            }
+
+            button,
+            .btn {
+                background: transparent;
+                border    : 1px solid #0e0c0c;
+                color     : #090808;
+            }
+            .btn-treat{
+                background-color: green;
+                color: white;
+            }
+        }
+
+        li+li {
+            margin-top: 2rem;
+        }
+    }
+    .registrationPanel{
+        margin: 0 auto;
+        
+    }
+    div {
+        footer {
+            margin-top: 3rem;
+        }
+        form {
+            padding: 0 10% 10% 10%;
+            input{
+                margin: 0 auto;
+                height: 2.1rem;
+            }
+        }
+        
+        .progress{
+            height: 30%;
+            width: 40%;
+            
+        }
+        .progress-bar{
+            width: 25%;
+        }
+    }
+    article {
+        $bg-color-1: #f39b04;
+        $bg-color-2: #fff6dd;
+        
+        box-shadow: #eb8212 0 2px 8px 2px;
+        background-color: #f39b04;
+        //background: repeating-linear-gradient(45deg, $bg-color-1, $bg-color-1 10px, $bg-color-2 10px, $bg-color-2 20px);
+        box-shadow: #00576e 0 2px 8px 2px;
+        margin    : 2em 1em;
+        padding   : 1rem;
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            background-color: #f39b04;
+            box-shadow      : #5b3916 0 2px 8px 2px;
+            //background: #ddc47d;
+            color     : rgb(1, 1, 1);
+            margin    : 0;
+            padding   : 1rem 0.5rem;
+        }
+        footer {
+            display        : flex;
+            align-items    : center;
+            justify-content: flex-end;
+
+            &>*+* {
+                margin-left: 1rem;
+            }
+            
+        }
+        button,
+        .btn {
+            background: transparent;
+            border    : 1px solid #0e0c0c;
+            color     : #090808;
+        }
+    }
+}
+// .registrationPanel{
+//     margin-top: 20%;
+//     color: $primaryColor;
+// }
