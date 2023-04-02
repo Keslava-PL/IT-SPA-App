@@ -5,7 +5,10 @@ export function createEl(type, classes =[],attributes = {}){
  
 
     //adding classes
-    element.classList.add(...classes);
+    if( classes !== null){
+        element.classList.add(...classes);
+    }
+    
     
     //adding attributes
 

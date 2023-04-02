@@ -13,25 +13,29 @@ $primaryColor: #DCDFE5;
 $secondaryColor: #2F61CB;
 $thirdColor: #BD8C4C;
 $forthColor: #3C2B16;
-    .navbar{
-        background-color: #132753;
-        font-size: 0.8rem;
-        letter-spacing: 0.1rem;
-        font-weight: bold;
-        padding-bottom: 0.1rem;
-        padding-left: 0.2rem;
-        top: 0;
-        display: flex;
-        justify-content: space-between;
-        
-        
-        
-        
-      }
+$fontColor1: rgb(233, 235, 233);
+    
+
+.navbar{
+    background-color: #a3a7b0;
+    font-size: 0.8rem;
+    letter-spacing: 0.1rem;
+    font-weight: bold;
+    padding-bottom: 0.1rem;
+    padding-left: 0.2rem;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    
+    
+    
+    
+  }
+
       .navbar-brand > img{
         height: 3rem;
        // position: relative;
-        justify-content: center;
+        
       }
       
       .navbar-nav li{
@@ -48,28 +52,66 @@ $forthColor: #3C2B16;
       .navbar .navbar-nav .nav-link:hover{
         color: $mainFontColor;
         cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+
+        &:active{
+            color: green;
+        }
       }
+
       .navbar-toggler{
         background-color: #00195f;
         position: relative;
-        justify-content: center;
+        
       }
+    //   .divWelcome{
+    //     color: $mainFontColor;
+    //     position: relative;
+      
+
+    //   }
       .divWelcome{
         color: $mainFontColor;
         position: relative;
-      
+       // width: 25%;
+        display: flex;
+        align-items: center;
+        justify-content:space-between;
+        
+       
+        .divLogout{
+            display: flex;
+            align-items:end;
+            justify-content: space-between;
+
+        }
+        .avatar{
+            display: flex;
+            justify-content: left;
+            align-items: center;
+            margin-right: 0.5rem;
+
+        }
+
 
       }
 
-
 body {
-    background : linear-gradient(50deg, $thirdColor 64%, $primaryColor 80%, $forthColor 100%) no-repeat fixed;
+    //background : linear-gradient(50deg, $thirdColor 64%, $primaryColor 80%, $forthColor 100%) no-repeat fixed;
+    background-image: url('./assets/mainPage/background-theme.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
     font-family: 'Poppins', 'Arial', sans-serif;
     padding    : 2rem;
 }
 
 nav {
     
+   
+
+
+
 
     button,
     .btn {
@@ -113,8 +155,8 @@ main {
     h4,
     h5,
     h6 {
-        margin: 3rem 0;
-        color: #131111;
+        margin: 2rem 0;
+        color: #ede2e2;
     }
 
     p {
@@ -161,6 +203,9 @@ main {
         margin: 0 auto;
         
     }
+    .logForm{
+        color: $fontColor1;
+    }
     div {
         footer {
             margin-top: 3rem;
@@ -181,6 +226,14 @@ main {
         .progress-bar{
             width: 25%;
         }
+
+        // .imagesBilboard{
+            
+        //     img{
+        //         width: 200px;
+        //     }
+        // }
+
     }
     article {
         $bg-color-1: #f39b04;
