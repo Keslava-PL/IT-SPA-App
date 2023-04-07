@@ -19,14 +19,15 @@ export function Home() {
   </div>
 `;
   caption.innerHTML = `
-  <h1>Witaj na kursie nauki RWD</h1>
-  <a class="btn btn-outline-secondary btn-lg" href="#course"
-    >Przejdź do kursu</a
-  >
+  <h1>Witaj w IT Spa</h1>
+
   `;
 home.append(landing, caption);
-  const section = document.createElement("div");
 
+
+  const section = document.createElement("div");
+  const homeInner = landing.querySelector('.home-inner');
+  homeInner.append(section);
   // const img = document.createElement('img');
   // img.src = require('../assets/support.png');
   // img.style.width = '50vw'; //vw = view width
@@ -56,7 +57,7 @@ home.append(landing, caption);
         </div>
       </div>
     `;
-
+  //caption.append(section);
   const img1 = document.createElement("img");
   img1.classList.add("d-block", "w-100");
   img1.src = require("../assets/mainPage/spa-face.jpg");
@@ -250,8 +251,7 @@ home.append(landing, caption);
   conatainer.append(
     home,
     course,
-    section,
-    caption,
+    //section,
     course,
     feature,
     resources,

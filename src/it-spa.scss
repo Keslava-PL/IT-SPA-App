@@ -11,7 +11,7 @@ body {
 $mainFontColor: #FFF7E9;
 $primaryColor: #DCDFE5;
 $secondaryColor: #2F61CB;
-$thirdColor1: #BD8C4C;
+$thirdColor1: #d2b795;
 $thirdColor: rgb(141, 124, 31);
 $forthColor: #3C2B16;
 $fontColor1: rgb(233, 235, 233);
@@ -100,7 +100,7 @@ $fontColor1: rgb(233, 235, 233);
       }
 
 body {
-    background : linear-gradient(50deg, $thirdColor 64%, $primaryColor 80%, $forthColor 100%) no-repeat fixed;
+    background : linear-gradient(50deg, $thirdColor1 64%, $primaryColor 80%, $forthColor 100%) no-repeat fixed;
    //background-image: url('./assets/mainPage/background-theme.jpg');
     background-repeat: no-repeat;
     background-size: cover;
@@ -208,28 +208,27 @@ main {
     .logForm{
         color: $fontColor1;
     }
+    
     div {
 
+        h1,h2,h3,h4{
+          margin: 2rem 0;
+          color: #ede2e2;
+        }
+        margin: 2rem 0;
    
         footer {
             margin-top: 3rem;
         }
         form {
-            padding: 0 10% 10% 10%;
+            padding: 0 10% 0 10%;
             input{
                 margin: 0 auto;
                 height: 2.1rem;
             }
         }
         
-        .progress{
-            height: 30%;
-            width: 40%;
-            
-        }
-        .progress-bar{
-            width: 25%;
-        }
+
 
         //carusel
         .imagesBilboard{
@@ -244,7 +243,7 @@ main {
             top: 0;
             bottom: auto;
         }
-        landing
+        
         .home-inner{
             //background-image: url('./assets/mainPage/background-theme.jpg');
             //background-color: #00195f;
@@ -274,7 +273,9 @@ main {
             color: green;
           }
           .line{
-            margin-bottom: 0;
+            margin-bottom: 1;
+            
+            
           }
           .features-list{
             list-style: none;
@@ -322,6 +323,8 @@ main {
         //         width: 200px;
         //     }
         // }
+        //////////Booking/////////
+        
 
     }
     article {
@@ -365,7 +368,96 @@ main {
             color     : #090808;
         }
     }
+
+    header{
+      ///Booking///
+      h1,h2,h3{
+        margin: 2rem 0;
+        color: black;
+      }
+
+
+    }
 }
+///Booking////
+.booking-header{
+  margin: 3rem auto;
+  width: 100%;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  display: flex;
+  justify-content: center;
+}
+.booking-main{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+
+
+  button{
+    border-radius: 10px;
+  }
+
+  .booking-section-data{
+    height: 100%;
+    width: 60%;
+    .booking-div-datepicker{
+        margin-top: 0;        
+
+      .date-picker-form{
+        input{
+          text-align: center;
+          border-radius: 10px;
+        }
+
+      }
+    }
+    .booking-div-summary{
+      padding-left: 2vw;
+      padding-right: 2vw;
+      div{
+        padding-left: 0vw;
+      }
+    }
+    .booking-div-buttons{
+      display: flex;
+      justify-content: space-between;
+      padding-left: 2vw;
+      padding-right: 2vw;
+    }
+
+
+  }
+  .booking-section-img{
+    height: 400px;
+    width: 40%;
+    margin: 2rem 2rem 2rem 2rem;
+    img{
+      height: 100%;
+      width: 100%;
+      object-fit: contain;
+    }
+  }
+  
+}
+.input-group {
+  width: 300px;
+}
+
+/* Style the input */
+.form-control {
+  border-radius: 0;
+}
+
+/* Style the button */
+.btn {
+  border-radius: 0;
+}
+
+
+
+
 // .registrationPanel{
 //     margin-top: 20%;
 //     color: $primaryColor;

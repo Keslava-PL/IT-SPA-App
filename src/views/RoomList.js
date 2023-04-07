@@ -3,6 +3,8 @@
 import { RoomDetails } from "./RoomDetails";
 import { NavButton } from "../common/NavButton";
 import { cartManager } from "../cart/cart-manager";
+import { createEl } from "../common/createEl";
+import { Booking } from "./Booking";
 
 export function RoomList() {
   const section = document.createElement("section");
@@ -14,13 +16,6 @@ export function RoomList() {
     <p class="loading">Ładuję listę pokoi...</p>
     
   `;
-    //   const button = document.createElement('button');
-    // button.classList.add('btn', 'btn-success');
-    // button.setAttribute('type','button');
-    // button.innerText = 'Przycisk tralala'
-
-    // section.append(button);
-
 
   // pobieramy liste pokoi z serwera
   fetch("http://localhost:3000/rooms")
@@ -52,8 +47,8 @@ export function RoomList() {
           () => RoomDetails(room.id),
           ["btn"]
         );
-
-        li.querySelector("footer").append(addToCartButton, detailsButton);
+        const bookingButton = NavButton('Zarezerwuj',() => Booking(room), ['btn', 'btn-secondary']);
+        li.querySelector("footer").append(addToCartButton, detailsButton, bookingButton);
 
         return li;
       });

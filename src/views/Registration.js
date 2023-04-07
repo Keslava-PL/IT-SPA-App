@@ -131,7 +131,7 @@ const form = createEl('form', ['regForm', 'needs-validation'], {'novalidate': ''
                     const progressBar = createEl('div', ['progress-bar'], {'role':'progressbar', 'aria-valuenow':'0','aria-valuemin':'0','aria-valuemax':'100'});
                     passwordPowerLabel.appendChild(progressBar);
                     divRepeatPassword2.append(passwordPowerLabel);
-                        passwordPowerLabel.style.visibility = 'hidden';
+                    passwordPowerLabel.style.visibility = 'hidden';
  
                     divRepeatPassword2.appendChild(authInformationPanel);
 
@@ -141,6 +141,7 @@ const form = createEl('form', ['regForm', 'needs-validation'], {'novalidate': ''
                 const submitInButton = createEl('button', ['btn', 'btn-primary'],{'type':'submit'});
                 submitInButton.innerText = 'Sign up';
                 form.appendChild(submitInButton);
+
 
         //footer
         const footer = createEl('footer', ['submitFooter']);
