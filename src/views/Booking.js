@@ -156,6 +156,8 @@ export function Booking(room) {
     </div>
 
     `;
+
+  //ADD TO CART Button
   const addButton = divButtons.querySelector("#booking-addButton-btn");
   addButton.addEventListener("click", function () {
     //check validation
@@ -193,8 +195,6 @@ export function Booking(room) {
 
   // `;
   container.append(titleHeader, mainDiv);
-
-  //Header
 
   return container;
 }
