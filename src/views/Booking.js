@@ -10,16 +10,10 @@ import { openModal } from "../booking/openModal";
 export function Booking(room) {
   //
   const container = createEl("div", ["booking-container"]);
-  const titleHeader = createEl("header", ["booking", "booking-header"], {
-    style: "border: 1px solid black",
-  });
+  const titleHeader = createEl("header", ["booking", "booking-header"]);
 
-  const mainDiv = createEl("div", ["booking", "booking-main"], {
-    style: "border: 1px solid blue",
-  });
-  const dataSection = createEl("section", ["booking", "booking-section-data"], {
-    style: "border: 1px solid green",
-  });
+  const mainDiv = createEl("div", ["booking", "booking-main"]);
+  const dataSection = createEl("section", ["booking", "booking-section-data"]);
 
   //Site title
   titleHeader.innerHTML = `
@@ -184,9 +178,7 @@ export function Booking(room) {
   ///KONIEC Booking buttons
   //////////////////////////////////////////////////////
 
-  const imageFooter = createEl("section", ["booking", "booking-section-img"], {
-    style: "border: 1px solid red",
-  });
+  const imageFooter = createEl("section", ["booking", "booking-section-img"]);
   const img = createEl("img", ["booking-img"]);
 
 //adding random appending pictures
