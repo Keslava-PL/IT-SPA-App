@@ -188,7 +188,20 @@ export function Booking(room) {
     style: "border: 1px solid red",
   });
   const img = createEl("img", ["booking-img"]);
-  img.src = require("../assets/mainPage/exemple.jpg");
+
+//adding random appending pictures
+  const images = {
+    1: require("../assets/bookingImages/img1.jpg"),
+    2: require("../assets/bookingImages/img2.jpg"),
+    3: require("../assets/bookingImages/img3.jpg")
+  } 
+    const keys = Object.keys(images)
+    const indexRandom = Math.floor(Math.random() * keys.length);
+    const path = "../assets/bookingImages/img1.jpg";
+    console.log(indexRandom);
+    
+  img.src = images[indexRandom+1];
+  
   imageFooter.append(img);
 
   mainDiv.append(dataSection, imageFooter);

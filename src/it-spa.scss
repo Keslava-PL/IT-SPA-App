@@ -400,13 +400,14 @@ main {
   }
 
   .booking-section-data{
-    height: 100%;
+    height: auto;
     width: 60%;
     .booking-div-datepicker{
         margin-top: 0;        
 
       .date-picker-form{
         input{
+          height:50%;
           text-align: center;
           border-radius: 10px;
         }
@@ -430,9 +431,9 @@ main {
 
   }
   .booking-section-img{
-    height: 400px;
+    height: auto;
     width: 40%;
-    margin: 2rem 2rem 2rem 2rem;
+    margin: 0 0 0 0;
     img{
       height: 100%;
       width: 100%;
