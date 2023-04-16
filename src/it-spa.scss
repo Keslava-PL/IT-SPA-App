@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 @import "~bootstrap/scss/bootstrap";
 
+
 html,
 body {
     height : 100%;
@@ -100,21 +101,15 @@ $fontColor1: rgb(233, 235, 233);
       }
 
 body {
-    background : linear-gradient(50deg, $thirdColor1 64%, $primaryColor 80%, $forthColor 100%) no-repeat fixed;
+    //background : linear-gradient(50deg, $thirdColor1 64%, $primaryColor 80%, $forthColor 100%) no-repeat fixed;
    //background-image: url('./assets/mainPage/background-theme.jpg');
     background-repeat: no-repeat;
-    background-size: cover;
+   // background-size: cover;
     font-family: 'Poppins', 'Arial', sans-serif;
     padding    : 2rem;
 }
 
 nav {
-    
-   
-
-
-
-
     button,
     .btn {
         background   : transparent;
@@ -208,14 +203,26 @@ main {
     .logForm{
         color: $fontColor1;
     }
-    
+            //carusel
+            .imagesBilboard{
+              background-size: contain;
+              background-repeat: no-repeat;
+              width: 100%;
+          }
+          .carousel-caption{
+              background-color: rgb(147, 140, 140); opacity: 0.7;
+              color: $fontColor1;
+              position: absolute;
+              top: 0;
+              bottom: auto;
+          }
     div {
 
         h1,h2,h3,h4{
           margin: 2rem 0;
           color: #ede2e2;
         }
-        margin: 2rem 0;
+        // margin: 2rem 0;
    
         footer {
             margin-top: 3rem;
@@ -228,27 +235,24 @@ main {
             }
         }
         
+        .progress{
+          height: 30%;
+          width: 40%;
+          
+      }
+      .progress-bar{
+          width: 25%;
+      }
 
 
-        //carusel
-        .imagesBilboard{
-            background-size: contain;
-            background-repeat: no-repeat;
-            width: 100%;
-        }
-        .carousel-caption{
-            background-color: rgb(147, 140, 140); opacity: 0.7;
-            color: $fontColor1;
-            position: absolute;
-            top: 0;
-            bottom: auto;
-        }
         
         .home-inner{
             //background-image: url('./assets/mainPage/background-theme.jpg');
             //background-color: #00195f;
             background-size: contain;
             background-repeat: no-repeat;
+            margin-left: 0;
+            padding-left: 0;
           }
           .caption {
             width: 100%;
@@ -256,12 +260,13 @@ main {
             position: absolute;
             top: 30%;
             z-index: 1;
+
           }
         //course
-        #course{
-            background-color: lightgray;
+        // #course{
+        //     background-color: lightgray;
           
-          }
+        //   }
 
         //features
           .jumbotron{
@@ -331,9 +336,9 @@ main {
         $bg-color-1: #f39b04;
         $bg-color-2: #fff6dd;
         
-        box-shadow: #eb8212 0 2px 8px 2px;
-        background-color: #f39b04;
-        //background: repeating-linear-gradient(45deg, $bg-color-1, $bg-color-1 10px, $bg-color-2 10px, $bg-color-2 20px);
+        // box-shadow: #eb8212 0 2px 8px 2px;
+        // background-color: #f39b04;
+        background: repeating-linear-gradient(45deg, $bg-color-1, $bg-color-1 10px, $bg-color-2 10px, $bg-color-2 20px);
         box-shadow: #00576e 0 2px 8px 2px;
         margin    : 2em 1em;
         padding   : 1rem;

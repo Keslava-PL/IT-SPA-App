@@ -35,12 +35,6 @@ export function RoomList() {
             <footer></footer>
           `;
 
-        const addToCartButton = document.createElement("button");
-        addToCartButton.innerText = "Add to cart";
-        addToCartButton.classList.add("btn");
-        addToCartButton.addEventListener("click", () =>
-          cartManager.addItem(room, type)
-        );
 
         const detailsButton = NavButton(
           "Read more...",
@@ -48,7 +42,7 @@ export function RoomList() {
           ["btn"]
         );
         const bookingButton = NavButton('Zarezerwuj',() => Booking(room), ['btn', 'btn-secondary']);
-        li.querySelector("footer").append(addToCartButton, detailsButton, bookingButton);
+        li.querySelector("footer").append(detailsButton, bookingButton);
 
         return li;
       });

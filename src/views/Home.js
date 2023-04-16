@@ -36,19 +36,19 @@ home.append(landing, caption);
       <!--<h2 class = "header">Home</h2>-->
       <div id="carouselControls" class="imagesBilboard carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
-            <div class="car car1 carousel-item active">
+            <div class="car car1 carousel-item active data-bs-interval="1000"">
               <div class="carousel-caption d-none d-md-block">
                   <h5>Witaj w IT-Spa</h5>
                   <p>Najlepsze zabiegi kosmetyczne w regionie</p>
               </div>
             </div>
-            <div class="car car2 carousel-item">
+            <div class="car car2 carousel-item data-bs-interval="2000"">
               <div class="carousel-caption d-none d-md-block">
                   <h5>IT-SPA</h5>
                   <p>Doświadczona i profesjonalna obsługa</p>
               </div>
             </div>
-            <div class="car car3 carousel-item">
+            <div class="car car3 carousel-item data-bs-interval="3000"">
               <div class="carousel-caption d-none d-md-block">
                   <h5>IT-SPA</h5>
                   <p>Zajmiemy się wszystkim co Cię boli.</p>

@@ -7,6 +7,7 @@ import { NavButton } from "../common/NavButton";
 import { NavigateTo } from "../common/NavigateTo";
 import { Login } from "./Login";
 
+
 export function Registration(){
     
     const registrPanel = document.createElement('div');
@@ -83,7 +84,7 @@ const form = createEl('form', ['regForm', 'needs-validation'], {'novalidate': ''
                 const inputPassword = createEl('input', ['form-control','password-controll'], {
                     'id': 'inputPassword3',
                     'name': 'inputPass',
-                    'type': 'password',
+                    'type': 'text',
                     'placeholder': 'Hasło',
                     'required':''
                 });
