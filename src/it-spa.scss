@@ -16,10 +16,18 @@ $thirdColor1: #d2b795;
 $thirdColor: rgb(141, 124, 31);
 $forthColor: #3C2B16;
 $fontColor1: rgb(233, 235, 233);
+
+
+
+
+//background gradnient
+$backGrandColor1: #2E5AC3;
+$backGrandColor2: #7BB3E2;
+$backGrandColor3: #3A3937;
     
 
 .navbar{
-    background-color: #a3a7b0;
+    background-color: #C2C2C2;
     font-size: 0.8rem;
     letter-spacing: 0.1rem;
     font-weight: bold;
@@ -102,6 +110,7 @@ $fontColor1: rgb(233, 235, 233);
 
 body {
     //background : linear-gradient(50deg, $thirdColor1 64%, $primaryColor 80%, $forthColor 100%) no-repeat fixed;
+    background : linear-gradient(50deg, $backGrandColor1 64%, $backGrandColor2 80%, $backGrandColor3 100%) no-repeat fixed;
    //background-image: url('./assets/mainPage/background-theme.jpg');
     background-repeat: no-repeat;
    // background-size: cover;
@@ -222,7 +231,7 @@ main {
           margin: 2rem 0;
           color: #ede2e2;
         }
-        // margin: 2rem 0;
+       
    
         footer {
             margin-top: 3rem;
