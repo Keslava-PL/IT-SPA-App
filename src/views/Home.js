@@ -18,10 +18,10 @@ export function Home() {
     <div class="home-inner"></div>
   </div>
 `;
-  caption.innerHTML = `
-  <h1>Witaj w IT Spa</h1>
+  // caption.innerHTML = `
+  // <h1>Witaj w IT Spa</h1>
 
-  `;
+  // `;
 home.append(landing, caption);
 
 
@@ -44,13 +44,13 @@ home.append(landing, caption);
             </div>
             <div class="car car2 carousel-item data-bs-interval="2000"">
               <div class="carousel-caption d-none d-md-block">
-                  <h5>IT-SPA</h5>
+                  <h5>Witaj w IT-Spa</h5>
                   <p>Doświadczona i profesjonalna obsługa</p>
               </div>
             </div>
             <div class="car car3 carousel-item data-bs-interval="3000"">
               <div class="carousel-caption d-none d-md-block">
-                  <h5>IT-SPA</h5>
+                  <h5>Witaj w IT-Spa</h5>
                   <p>Zajmiemy się wszystkim co Cię boli.</p>
               </div>
             </div>
@@ -82,8 +82,8 @@ home.append(landing, caption);
   course.innerHTML = `
   <div id="course">
 		<div class="text-center col-12">
-			<p>Zobacz więcej o naszym kursie w linku:</p>
-			<a class="btn btn-secondary btn-md" href="https://www.podyplomowe.it" target="_blank">Więcej o studiach</a>
+			<p>Zobacz więcej o naszej firmie w linku:</p>
+			<a class="btn btn-secondary btn-md" href="https://www.podyplomowe.it" target="_blank">Więcej o firmie</a>
 		</div>
 	</div>
   `;
@@ -155,14 +155,14 @@ home.append(landing, caption);
       </div>
     </div>
   `;
-  const blackquote = createEl("blockquote", ["blockquote", "text-center"]);
-  blackquote.innerHTML = `
-    <p>Lorem ipsum doloing elae aut? Ducimus, dolorem.</p>
-  `;
-  const footer = createEl("footer", ["blockquote-footer"]);
-  footer.innerHTML = `
-    <cite>Malwina Warszawska</cite>
-  `;
+  // const blackquote = createEl("blockquote", ["blockquote", "text-center"]);
+  // blackquote.innerHTML = `
+  //   <p>Lorem ipsum doloing elae aut? Ducimus, dolorem.</p>
+  // `;
+  // const footer = createEl("footer", ["blockquote-footer"]);
+  // footer.innerHTML = `
+    
+  // `;
 
   const clients = createEl("div", [], { id: "clients" });
   clients.innerHTML = `
@@ -230,8 +230,8 @@ home.append(landing, caption);
 <footer>
 <div class="col-12 text-center">
 <h3 class="heading">Kontakt do twórców:</h3>
-<img src="img/Logo.jpeg" alt="LOGO" />
-<p>Lorem ipsum dolor sit amet.</p>
+<a class ='icon'> </a>
+<p>Better skin - Better future</p>
 <strong>Informacje pod numerem 444333222</strong>
 <hr />
 <a href="https://www.youtube.com" target="_blank">
@@ -240,13 +240,16 @@ home.append(landing, caption);
 <a href="https://www.amazon.com" target="_blank">
   <i class="fab fa-amazon fa-2x"></i>
 </a>
-<p>&copy; Copyright by ..... </p>
+
 </div>
 </footer>
 
 `;
 
-  const icon = document.createElement("i");
+  const icon = createEl('img');
+  icon.src = require("../assets/navBrand-2.png");
+
+  contact.querySelector('.icon').append(icon);
 
   conatainer.append(
     home,
@@ -255,8 +258,8 @@ home.append(landing, caption);
     course,
     feature,
     resources,
-    blackquote,
-    footer,
+    // blackquote,
+    //footer,
     clients,
     contact
   );

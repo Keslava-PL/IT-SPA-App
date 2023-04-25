@@ -11,7 +11,7 @@ export function RoomList() {
   const ul = document.createElement("ul");
 
   section.innerHTML = `
-    <h2 class = "header">Room List</h2>
+    <h2 class = "header">Dostępne pokoje</h2>
     <p class = "header">Sprawdź ofertę pokoi.</p>
     <p class="loading">Ładuję listę pokoi...</p>
     
@@ -39,7 +39,7 @@ export function RoomList() {
         const detailsButton = NavButton(
           "Read more...",
           () => RoomDetails(room.id),
-          ["btn"]
+          ["btn", 'btn-secondary']
         );
         const bookingButton = NavButton('Zarezerwuj',() => Booking(room), ['btn', 'btn-secondary']);
         li.querySelector("footer").append(detailsButton, bookingButton);

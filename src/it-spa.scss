@@ -8,28 +8,36 @@ body {
     margin : 0;
     padding: 0;
 }
+
+
 ///zmienne globalne 
 $mainFontColor: #FFF7E9;
-$primaryColor: #DCDFE5;
+$primaryColor: #2F4858;
 $secondaryColor: #2F61CB;
 $thirdColor1: #d2b795;
 $thirdColor: rgb(141, 124, 31);
 $forthColor: #3C2B16;
 $fontColor1: rgb(233, 235, 233);
 
-
+$color1: #DBB7BE;
+$color2: #B298A9;
+$color3: #596177;
+$color4: #2F4858;
+$color5: #867C93;
 
 
 //background gradnient
-$backGrandColor1: #2E5AC3;
-$backGrandColor2: #7BB3E2;
+$backGrandColor1: #FFD9D2;
+$backGrandColor2: #DBB7BE;
 $backGrandColor3: #3A3937;
+
+$tablesColor: #B298A9;
     
 
 .navbar{
-    background-color: #C2C2C2;
-    font-size: 0.8rem;
-    letter-spacing: 0.1rem;
+    background-color: $color1;
+    font-size: 1rem;
+    //letter-spacing: 0.1rem;
     font-weight: bold;
     padding-bottom: 0.1rem;
     padding-left: 0.2rem;
@@ -50,30 +58,34 @@ $backGrandColor3: #3A3937;
       
       .navbar-nav li{
         padding-right: 0.4rem;
-        
-        color: #00195f;
+        width: auto;
+        color: $color4;
         
       }
       .navbar .navbar-nav .nav-link{
         padding-top: 0.4rem;
+        color: $color4;
         
       }
       
       .navbar .navbar-nav .nav-link:hover{
-        color: $mainFontColor;
+        color: $color2;
         cursor: pointer;
         display: flex;
         justify-content: space-between;
 
         &:active{
-            color: green;
+            color: $color5;
         }
       }
 
       .navbar-toggler{
-        background-color: #00195f;
+        background-color: $color4;
         position: relative;
         
+        &:active{
+          color: $color5;
+        }
       }
 
     //   .divWelcome{
@@ -83,18 +95,38 @@ $backGrandColor3: #3A3937;
 
     //   }
       .divWelcome{
-        color: $mainFontColor;
-        position: relative;
+        color: $color3;
+        position: inherit;
        // width: 25%;
         display: flex;
         align-items: center;
         justify-content:space-between;
+        right: 8vw;
+        
         
        
         .divLogout{
             display: flex;
             align-items:end;
             justify-content: space-between;
+            color: $color5;
+
+            i{
+              color: $color4;
+            }
+
+        }
+        .logInButton{
+          color: $color4;
+        }
+        .logInButton:hover{
+          cursor: pointer;
+          color: $color2;
+
+          &:active{
+            color: $color5;
+          }
+
 
         }
         .avatar{
@@ -110,13 +142,14 @@ $backGrandColor3: #3A3937;
 
 body {
     //background : linear-gradient(50deg, $thirdColor1 64%, $primaryColor 80%, $forthColor 100%) no-repeat fixed;
-    background : linear-gradient(50deg, $backGrandColor1 64%, $backGrandColor2 80%, $backGrandColor3 100%) no-repeat fixed;
+    background : linear-gradient(70deg, $backGrandColor1 54%, $backGrandColor2 80%, $backGrandColor3 100%) no-repeat fixed;
    //background-image: url('./assets/mainPage/background-theme.jpg');
     background-repeat: no-repeat;
    // background-size: cover;
     font-family: 'Poppins', 'Arial', sans-serif;
     padding    : 2rem;
 }
+
 
 nav {
     button,
@@ -140,18 +173,56 @@ nav {
     }
 
     .btn.btn-active {
-        background-color: #1a1710;
+        background-color: #2F4858;
         text-decoration : underline;
     }
 }
 td,tr,th{
-    color:#d3d1d1;
+    color:#000000;
+  
+    width: 70vw;
+    .table-footer{
+      border-top: 4px solid black;
+    }
 }
 
-
+.popover{
+  max-width: 50%;
+  margin-top: 0px;
+}
+.popover-container{
+  
+  padding: 0 0 0 0;
+}
 
 main {
-    
+  button {
+    border-radius: 10%;
+  }
+  .btn,
+  .btn-primary{
+    background-color: $color3;
+    border-color: black;
+    border-radius: 10%;
+  }
+  .btn-primary:hover{
+    background-color: $color1;
+    border-color: black;
+    &:active{
+      background-color: $color5;
+      
+    }
+  }
+    .btn-secondary:hover{
+      background-color: $color1;
+      border-color: black;
+      &:active{
+        background-color: $color5;
+        
+      }
+  }
+  
+  
 .authInfoPanel, .regInfoPanel{
     color: red;
 }
@@ -162,7 +233,7 @@ main {
     h5,
     h6 {
         margin: 2rem 0;
-        color: #ede2e2;
+        color: $color4;
     }
 
     p {
@@ -174,9 +245,9 @@ main {
         padding   : 0;
 
         li {
-            background-color: #f39b04;
-            box-shadow      : #eb8212 0 2px 8px 2px;
-            color           : #030202;
+            background-color: $tablesColor;
+            box-shadow      : pink 0 2px 8px 2px;
+            color           : $backGrandColor1;
             padding         : 1rem;
 
             footer {
@@ -194,10 +265,11 @@ main {
                 background: transparent;
                 border    : 1px solid #0e0c0c;
                 color     : #090808;
+                border-radius: 15%;
             }
             .btn-treat{
-                background-color: green;
-                color: white;
+                background-color: transparent;
+                color: #090808;
             }
         }
 
@@ -217,19 +289,30 @@ main {
               background-size: contain;
               background-repeat: no-repeat;
               width: 100%;
+              height: 40%;
+          }
+          .carusel-item{
+            height: 50%;
           }
           .carousel-caption{
-              background-color: rgb(147, 140, 140); opacity: 0.7;
-              color: $fontColor1;
+              background-color: $tablesColor; opacity: 0.8;
+              color: $color4;
+              box-shadow: $color3 0 1px 1px 3px; 
               position: absolute;
               top: 0;
               bottom: auto;
+              border-radius: 35%;
+
+              h5{
+                color: #000000;
+                text-decoration: underline;
+              }
           }
     div {
 
         h1,h2,h3,h4{
           margin: 2rem 0;
-          color: #ede2e2;
+          color: $color4;
         }
        
    
@@ -265,10 +348,12 @@ main {
           }
           .caption {
             width: 100%;
-            color: white;
+            color: $color4;
             position: absolute;
             top: 30%;
             z-index: 1;
+            margin: 0 auto;
+            background-color: $color3 opacity($color: #000000);
 
           }
         //course
@@ -284,7 +369,7 @@ main {
             margin-bottom: 0;
           }
           .jumbotron ul li {
-            color: green;
+            
           }
           .line{
             margin-bottom: 1;
@@ -294,6 +379,15 @@ main {
           .features-list{
             list-style: none;
           }
+          .resource{
+            i{
+            color: $tablesColor;
+            //box-shadow: #595958 2px 2px 8px 2px;
+            box-shadow: black 2px 2px;
+
+          }
+          }
+          
 
         //resources
         //clients
@@ -301,10 +395,15 @@ main {
             width: 90%;
             border-radius: 20%;
             min-width: 15vw; /* 15% szerokości viewportu */
+            
           }
           
           .blockquote {
             width: 90%;
+            p{
+               text-align: left;
+            }
+           
           }
           @media all and (max-width:576px){
             .client {
@@ -331,19 +430,13 @@ main {
             margin: 0.5rem 0;
             }
 
-        // .imagesBilboard{
             
-        //     img{
-        //         width: 200px;
-        //     }
-        // }
-        //////////Booking/////////
         
 
     }
     article {
-        $bg-color-1: #f39b04;
-        $bg-color-2: #fff6dd;
+        $bg-color-1 : $tablesColor ;
+        $bg-color-2: $color2;
         
         // box-shadow: #eb8212 0 2px 8px 2px;
         // background-color: #f39b04;
@@ -358,10 +451,10 @@ main {
         h4,
         h5,
         h6 {
-            background-color: #f39b04;
+            background-color: $color4;
             box-shadow      : #5b3916 0 2px 8px 2px;
             //background: #ddc47d;
-            color     : rgb(1, 1, 1);
+            color     : rgb(202, 193, 193);
             margin    : 0;
             padding   : 1rem 0.5rem;
         }
@@ -380,6 +473,7 @@ main {
             background: transparent;
             border    : 1px solid #0e0c0c;
             color     : #090808;
+            border-radius: 15%;
         }
     }
 
@@ -411,6 +505,10 @@ main {
 
   button{
     border-radius: 10px;
+    margin-top: 2vw;
+    color: white;
+    margin-left: 4vw;
+    margin-right: 0;
   }
 
   .booking-section-data{
@@ -459,14 +557,23 @@ main {
   }
   
 }
+form{
+  width: 70vw;
+  label{
+    color: black;
+  }
+  input{
+    border-radius: 20%;
+    width: 50%;
+   
+  }
+}
 .input-group {
   width: 300px;
 }
 
 /* Style the input */
-.form-control {
-  border-radius: 0;
-}
+
 
 /* Style the button */
 .btn {

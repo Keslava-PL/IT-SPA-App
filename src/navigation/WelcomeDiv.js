@@ -8,7 +8,16 @@ import { LogOut } from "../authorization/login/LogOut";
 import { createEl } from "../common/createEl";
 
 export function WelcomeDiv(nickname, guard) {
-  const divWelcome = createEl("div", ["divWelcome"]);
+  const divWelcome = createEl("li", ["nav-item","divWelcome" ]);
+  divWelcome.setAttribute("data-bs-toggle", "collapse");
+  divWelcome.setAttribute("data-bs-target", ".navbar-collapse")
+
+  // el.classList.add('nav-item');
+  // el.classList.add(...classes);
+  // el.setAttribute("data-bs-toggle", "collapse");
+  // el.setAttribute("data-bs-target", ".navbar-collapse");
+
+
 
   if (guard === 1) {
     //if logged show user nickname
@@ -38,6 +47,7 @@ export function WelcomeDiv(nickname, guard) {
       "fa-solid",
       "fa-arrow-right-from-bracket",
       "fa-lg",
+      "fa-black"
     ]);
     button.append(logoutIcon);
     divName.append(text, button);
@@ -49,7 +59,7 @@ export function WelcomeDiv(nickname, guard) {
     });
   } else {
     const logInButton = NavButton("Zaloguj się", Login, "");
-
+    logInButton.classList.add('logInButton');
     divWelcome.classList.add("divWelcome");
     divWelcome.appendChild(logInButton);
   }

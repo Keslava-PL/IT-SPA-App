@@ -161,7 +161,7 @@ export function Booking(room) {
     if (form.checkValidity()) {
       let i = 0;
       for (i; i < daysNumber; i++) {
-        cartManager.addItem(room, "roomList");
+        cartManager.addRoom(room);
       }
       openModal();
     } else {

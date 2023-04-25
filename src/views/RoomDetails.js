@@ -29,7 +29,7 @@ export function RoomDetails(roomId) {
             <footer></footer>
           `;
 
-            const backButton = NavButton('Powrót', RoomList, ['btn']);
+            const backButton = NavButton('Powrót', RoomList, ['btn', 'btn-secondary', 'btn-treat']);
             details.querySelector('footer').append(backButton);
 
   

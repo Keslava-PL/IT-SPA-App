@@ -8,13 +8,15 @@ import { WelcomeDiv } from "./WelcomeDiv";
 import { dataMenager } from "../data/data-manager";
 import { createEl } from "../common/createEl";
 import { cartTooltips } from "./cartTooltips";
-import { Tooltip } from "bootstrap";
+import { Popover, Tooltip } from "bootstrap";
+import { CartPopover } from "../views/CartPopover";
+import { right, start } from "@popperjs/core";
+import { NavigateTo } from "../common/NavigateTo";
 
 const navItems = [
-  { name: "Home", component: Home },
-  { name: "Rooms", component: RoomList },
-  { name: "Treatments", component: Treatments },
-  { name: "Cart 🛒", component: Cart },
+  { name: "Strona domowa", component: Home },
+  { name: "Pokoje", component: RoomList },
+  { name: "Zabiegi", component: Treatments },
 ];
 
 export function NavBoot(authGuard) {
@@ -42,7 +44,7 @@ export function NavBoot(authGuard) {
   //add src image to navbar
   const navbarBrandImage = createEl("img", [], { alt: "Logo.png" });
   // const navbarBrandImage = document.createElement('img');
-  navbarBrandImage.src = require("../assets/navBrand.png");
+  navbarBrandImage.src = require("../assets/navBrand-2.png");
   // navbarBrandImage.alt = 'Logo.png';
 
   navbarBrandA.append(navbarBrandImage);
@@ -81,12 +83,37 @@ export function NavBoot(authGuard) {
 
   divNav.append(lis);
 
-  const cartButton = cartTooltips("Koszyk");
 
-  lis.append(cartButton);
-  //const cart = document.querySelector()
 
-  //create
+const el = createEl('li', ['nav-item'], {"data-bs-toggle": "collapse", "data-bs-target": ".navbar-collapse"});
+
+
+  const koszykButton = createEl('a', [, 'nav-link'], {'data-bs-toggle':'popover', 'title':'Aktualne zakupy'});
+  koszykButton.innerText ='Koszyk';
+
+  el.append(koszykButton);
+  lis.append(el);
+  
+  koszykButton.addEventListener('mouseenter', () =>{
+    const popover = new Popover(koszykButton, {
+      title: 'Aktualne zakupy',
+      html:true,
+      content: CartPopover()
+      
+    });
+    
+    popover.show();
+  })
+
+  koszykButton.addEventListener('mouseleave', () =>{
+    const popover = Popover.getInstance(koszykButton);
+    if(popover){
+      popover.hide()
+    }
+  });
+  koszykButton.addEventListener('click', () => {
+    NavigateTo(Cart);
+  })
 
   //add navigation elements
 
@@ -96,11 +123,6 @@ export function NavBoot(authGuard) {
     WelcomeDiv(user.nickname, authGuard),
     divNav
   );
-  // document.readyState(function(){
-  //   '[data-toggle="tooltip"]'.Tooltip();
-  // })
-
-
 
   return navigation;
 }

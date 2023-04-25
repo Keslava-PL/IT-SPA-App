@@ -6,7 +6,6 @@ export const dataMenager = {
 
     const content = JSON.parse(storage);
 
-    console.log("content z data-manager", content);
     if (content.logged === true) {
       return (user = {
         nickname: content.nickname,
@@ -29,8 +28,13 @@ export const dataMenager = {
 
 
     let content = JSON.parse(storage);
-
-    let loggedInfo = content.logged;
+    let loggedInfo;
+    if(content !== null){
+      loggedInfo = content.logged;
+    }else{
+      loggedInfo = false;
+    }
+    
     let guard;
 
     if (loggedInfo === true) {

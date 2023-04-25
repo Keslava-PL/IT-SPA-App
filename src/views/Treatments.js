@@ -9,7 +9,7 @@ export function Treatments(){
 const ul = document.createElement('ul');
 
 section.innerHTML=`
-<h2 class = "header">Treatment List:</h2>
+<h2 class = "header">Zabiegi:</h2>
 <p class = "header">Sprawdź ofertę zabiegów</p>
 <p class="loading">Ładuję listę zabiegów...</p>`;
 
