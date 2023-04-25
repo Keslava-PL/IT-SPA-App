@@ -1,5 +1,4 @@
 import { Modal } from "bootstrap";
-import { createEl } from "../common/createEl";
 import { NavigateTo } from "../common/NavigateTo";
 import { Cart } from "../views/Cart";
 import { RoomList } from "../views/RoomList";

@@ -1,10 +1,9 @@
-import { LogOut } from "../authorization/login/LogOut";
-import { NavigateTo } from "../common/NavigateTo";
+
 import { dataMenager } from "../data/data-manager";
 import { createEl } from "../common/createEl";
 
 export function Home() {
-  const user = dataMenager.getLoggedUser();
+
 
   const conatainer = createEl("div", ["home-container"]);
 

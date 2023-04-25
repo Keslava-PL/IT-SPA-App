@@ -1,7 +1,4 @@
 // cart-manager.js
-
-import { isEmptyObject } from "jquery";
-
 const key = "it-spa-cart";
 const keyRoom = "it-spa-room";
 

@@ -1,5 +1,5 @@
 export async function getMaxId() {
-  let answer;
+  
   let id;
 
   await fetch("http://localhost:3000/users")
