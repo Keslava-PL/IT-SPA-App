@@ -19,22 +19,21 @@ export const dataMenager = {
   },
   getAuthGuard() {
     const storage = localStorage.getItem(key);
-   //first page loading
-    if(storage === null){
-      const setLogged = {logged: false};
+    //first page loading
+    if (storage === null) {
+      const setLogged = { logged: false };
 
       localStorage.setItem(key, JSON.stringify(setLogged));
     }
 
-
     let content = JSON.parse(storage);
     let loggedInfo;
-    if(content !== null){
+    if (content !== null) {
       loggedInfo = content.logged;
-    }else{
+    } else {
       loggedInfo = false;
     }
-    
+
     let guard;
 
     if (loggedInfo === true) {
@@ -43,5 +42,5 @@ export const dataMenager = {
       guard = 0;
     }
     return guard;
-  }
+  },
 };

@@ -5,32 +5,24 @@ import { createEl } from "../common/createEl";
 
 export function Home() {
   const user = dataMenager.getLoggedUser();
-  //console.log("user",user);
-  //home div
-  const conatainer = createEl('div', ['home-container']);
+
+  const conatainer = createEl("div", ["home-container"]);
 
   const home = createEl("div", ["home"]);
   const landing = createEl("div", ["landing"]);
   const caption = createEl("div", ["text-center", "caption"]);
-  
+
   landing.innerHTML = `        
   <div class="home-wrap">
     <div class="home-inner"></div>
   </div>
 `;
-  // caption.innerHTML = `
-  // <h1>Witaj w IT Spa</h1>
 
-  // `;
-home.append(landing, caption);
-
+  home.append(landing, caption);
 
   const section = document.createElement("div");
-  const homeInner = landing.querySelector('.home-inner');
+  const homeInner = landing.querySelector(".home-inner");
   homeInner.append(section);
-  // const img = document.createElement('img');
-  // img.src = require('../assets/support.png');
-  // img.style.width = '50vw'; //vw = view width
 
   section.innerHTML = `
       <!--<h2 class = "header">Home</h2>-->
@@ -155,14 +147,6 @@ home.append(landing, caption);
       </div>
     </div>
   `;
-  // const blackquote = createEl("blockquote", ["blockquote", "text-center"]);
-  // blackquote.innerHTML = `
-  //   <p>Lorem ipsum doloing elae aut? Ducimus, dolorem.</p>
-  // `;
-  // const footer = createEl("footer", ["blockquote-footer"]);
-  // footer.innerHTML = `
-    
-  // `;
 
   const clients = createEl("div", [], { id: "clients" });
   clients.innerHTML = `
@@ -246,20 +230,19 @@ home.append(landing, caption);
 
 `;
 
-  const icon = createEl('img');
+  const icon = createEl("img");
   icon.src = require("../assets/navBrand-2.png");
 
-  contact.querySelector('.icon').append(icon);
+  contact.querySelector(".icon").append(icon);
 
   conatainer.append(
     home,
     course,
-    //section,
+
     course,
     feature,
     resources,
-    // blackquote,
-    //footer,
+
     clients,
     contact
   );

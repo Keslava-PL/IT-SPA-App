@@ -4,14 +4,13 @@ import { NavigateTo } from "../common/NavigateTo";
 import { Cart } from "../views/Cart";
 import { RoomList } from "../views/RoomList";
 
-export function openModal(){
-
-    var modal = document.createElement('div');
-    modal.className = 'modal fade';
-    modal.id = 'myModal';
-    modal.tabIndex = -1;
-    modal.setAttribute('aria-hidden', 'true');
-    modal.innerHTML = `
+export function openModal() {
+  var modal = document.createElement("div");
+  modal.className = "modal fade";
+  modal.id = "myModal";
+  modal.tabIndex = -1;
+  modal.setAttribute("aria-hidden", "true");
+  modal.innerHTML = `
       <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
           <div class="modal-header">
@@ -29,33 +28,27 @@ export function openModal(){
         </div>
       </div>
     `;
-  
-    
-    document.body.appendChild(modal);
-    var myModal = new Modal(modal);
-  
-    //Close button
-    const buttonClose = modal.querySelector('.btn-modal-close');
-    buttonClose.addEventListener('click', function () {
-        myModal.hide();
-      });
-    const buttonMoveToCart = modal.querySelector('.btn-modal-moveToCart');
-    buttonMoveToCart.addEventListener('click', function () {
-      myModal.hide();  
-      NavigateTo(Cart);
-      
-      });
-    const buttonMoveToRoomList = modal.querySelector('.btn-modal-moveToRoomList');
-    buttonMoveToRoomList.addEventListener('click', function () {
-        myModal.hide();
-        NavigateTo(RoomList)
-      });
-    
-    
+
+  document.body.appendChild(modal);
+  var myModal = new Modal(modal);
+
+  //Close button
+  const buttonClose = modal.querySelector(".btn-modal-close");
+  buttonClose.addEventListener("click", function () {
+    myModal.hide();
+  });
+  const buttonMoveToCart = modal.querySelector(".btn-modal-moveToCart");
+  buttonMoveToCart.addEventListener("click", function () {
+    myModal.hide();
+    NavigateTo(Cart);
+  });
+  const buttonMoveToRoomList = modal.querySelector(".btn-modal-moveToRoomList");
+  buttonMoveToRoomList.addEventListener("click", function () {
+    myModal.hide();
+    NavigateTo(RoomList);
+  });
+
   //Move to roomList
-  
 
-    myModal.show();
-   
+  myModal.show();
 }
-

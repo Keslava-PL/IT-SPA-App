@@ -1,8 +1,7 @@
-export function Checkout(){
+export function Checkout() {
+  const dialog = document.createElement("dialog");
 
-const dialog = document.createElement('dialog');
-
-dialog.innerHTML = `<button type="button" id="exitBtn">X</button>
+  dialog.innerHTML = `<button type="button" id="exitBtn">X</button>
 <article id="regText">
   <h2 id="regHeader">Regulamin strony!</h2>
   <p class="regParagraph">
@@ -32,12 +31,5 @@ dialog.innerHTML = `<button type="button" id="exitBtn">X</button>
     Adipisci, harum mollitia! Dolorem labore molestiae, tempore totam
     debitis laudantium dicta iusto magnam.
   </p>
-</article>`
-
-
-
-
-
-
-
+</article>`;
 }

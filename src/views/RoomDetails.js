@@ -1,6 +1,5 @@
 // RoomDetails.js
 import { NavButton } from "../common/NavButton";
-import { Nav } from "../navigation/Nav";
 import { RoomList } from "./RoomList";
 
 export function RoomDetails(roomId) {

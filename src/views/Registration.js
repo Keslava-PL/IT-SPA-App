@@ -1,10 +1,9 @@
-import { checkPasswordRepeat } from "../authorization/registration/checkPasswordRepeat";
 import { checkPowerOfPass } from "../authorization/registration/checkPowerOfPass";
 import { registrationAttempt } from "../authorization/registration/registrationAttempt";
-import { CheckValidation } from "../common/CheckValidation";
+
 import { createEl } from "../common/createEl";
 import { NavButton } from "../common/NavButton";
-import { NavigateTo } from "../common/NavigateTo";
+
 import { Login } from "./Login";
 
 export function Registration() {

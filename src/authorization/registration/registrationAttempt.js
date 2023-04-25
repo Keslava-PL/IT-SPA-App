@@ -13,24 +13,20 @@ export function registrationAttempt(
   inputPasswordRepeated
 ) {
   //check passwords
- 
+
   //check user if exist callback error
   checkUser(inputEmail)
     .then((response) => {
       if (response === false) {
-
         //check nick if exist callback message
         checkNick(inputNickname).then((response) => {
           if (response === false) {
-            
             //compare password with repeated password
             if (
               checkPasswordRepeat(inputPassword, inputPasswordRepeated) === true
             ) {
-
-                //get the max id
-                getMaxId().then((id) => {
-
+              //get the max id
+              getMaxId().then((id) => {
                 if (maxId !== NaN) {
                   addUserToDataBase(
                     inputEmail,
@@ -38,14 +34,13 @@ export function registrationAttempt(
                     inputPassword,
                     id
                   );
-                  NavigateTo(Login,0,1);
+                  NavigateTo(Login, 0, 1);
                 }
               });
             } else {
-
-                    const infoPanel = document.querySelector('.regInfoPanel');
-                    infoPanel.innerText = "Hasła muszą być takie same";
-                    infoPanel.removeAttribute('hidden','');
+              const infoPanel = document.querySelector(".regInfoPanel");
+              infoPanel.innerText = "Hasła muszą być takie same";
+              infoPanel.removeAttribute("hidden", "");
             }
           } else {
             const infoPanel = document.querySelector(".regInfoPanel");
@@ -62,5 +57,4 @@ export function registrationAttempt(
     .catch((error) => {
       console.log("Something gones wrong. Error: ", error);
     });
-
 }

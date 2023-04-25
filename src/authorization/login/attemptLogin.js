@@ -18,7 +18,7 @@ export async function attemptLogin(inputEmail, inputPassword) {
             age: u.age,
             logged: true,
           };
-          console.log('był w attempt');
+          console.log("był w attempt");
           localStorage.setItem(key, JSON.stringify(content));
           return (answer = {
             [u.login]: { email: u.email, name: u.name, age: u.age },

@@ -1,7 +1,7 @@
 import { loginAuth } from "../authorization/login/loginAuth";
-import { CheckValidation } from "../common/CheckValidation";
+
 import { NavButton } from "../common/NavButton";
-import { Home } from "./Home";
+
 import { Registration } from "./Registration";
 
 export function Login() {

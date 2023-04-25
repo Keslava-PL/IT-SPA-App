@@ -181,24 +181,23 @@ export function Booking(room) {
   const imageFooter = createEl("section", ["booking", "booking-section-img"]);
   const img = createEl("img", ["booking-img"]);
 
-//adding random appending pictures
+  //adding random appending pictures
   const images = {
     1: require("../assets/bookingImages/img1.jpg"),
     2: require("../assets/bookingImages/img2.jpg"),
-    3: require("../assets/bookingImages/img3.jpg")
-  } 
-    const keys = Object.keys(images)
-    const indexRandom = Math.floor(Math.random() * keys.length);
-    const path = "../assets/bookingImages/img1.jpg";
-    console.log(indexRandom);
-    
-  img.src = images[indexRandom+1];
-  
+    3: require("../assets/bookingImages/img3.jpg"),
+  };
+  const keys = Object.keys(images);
+  const indexRandom = Math.floor(Math.random() * keys.length);
+  const path = "../assets/bookingImages/img1.jpg";
+  console.log(indexRandom);
+
+  img.src = images[indexRandom + 1];
+
   imageFooter.append(img);
 
   mainDiv.append(dataSection, imageFooter);
 
-  // `;
   container.append(titleHeader, mainDiv);
 
   return container;

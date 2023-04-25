@@ -2,8 +2,6 @@
 
 import { RoomDetails } from "./RoomDetails";
 import { NavButton } from "../common/NavButton";
-import { cartManager } from "../cart/cart-manager";
-import { createEl } from "../common/createEl";
 import { Booking } from "./Booking";
 
 export function RoomList() {
@@ -35,13 +33,15 @@ export function RoomList() {
             <footer></footer>
           `;
 
-
         const detailsButton = NavButton(
           "Read more...",
           () => RoomDetails(room.id),
-          ["btn", 'btn-secondary']
+          ["btn", "btn-secondary"]
         );
-        const bookingButton = NavButton('Zarezerwuj',() => Booking(room), ['btn', 'btn-secondary']);
+        const bookingButton = NavButton("Zarezerwuj", () => Booking(room), [
+          "btn",
+          "btn-secondary",
+        ]);
         li.querySelector("footer").append(detailsButton, bookingButton);
 
         return li;

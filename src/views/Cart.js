@@ -4,7 +4,6 @@ import { cartManager } from "../cart/cart-manager";
 import { createEl } from "../common/createEl";
 import { NavButton } from "../common/NavButton";
 
-
 export function Cart() {
   const container = createEl("div");
   container.innerHTML = `<h2>Koszyk:</h2>`;
