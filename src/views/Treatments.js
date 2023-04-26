@@ -1,13 +1,15 @@
 import { cartManager } from "../cart/cart-manager";
+import { createEl } from "../common/createEl";
 
 export function Treatments() {
-  const section = document.createElement("section");
-  const ul = document.createElement("ul");
+  const section = createEl("section");
+  const ul = createEl("ul", ['responsiveListing']);
 
   section.innerHTML = `
 <h2 class = "header">Zabiegi:</h2>
-<p class = "header">Sprawdź ofertę zabiegów</p>
-<p class="loading">Ładuję listę zabiegów...</p>`;
+<p class = "header">Sprawdź ofertę zabiegów:</p>
+<p class="loading">Ładuję listę zabiegów...</p>
+<div class = "treat-list"></div>`;
 
   fetch("http://localhost:3000/treatments")
     .then((response) => response.json())
@@ -43,7 +45,7 @@ export function Treatments() {
       section.querySelector(".loading").remove();
 
       //showing ready list of treatments
-      section.append(ul);
+      section.querySelector(".treat-list").append(ul);
     });
 
   return section;

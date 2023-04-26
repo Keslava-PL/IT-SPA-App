@@ -7,6 +7,7 @@ import { dataMenager } from "./data/data-manager";
 
 //picker
 import "flatpickr/dist/flatpickr.min.css";
+import { Treatments } from "./views/Treatments";
 
 const main = document.querySelector("main");
 
@@ -29,6 +30,6 @@ document.body.addEventListener("navigate", (event) => {
   main.append(Component());
 });
 
-main.append(Home());
+main.append(Treatments());
 
 

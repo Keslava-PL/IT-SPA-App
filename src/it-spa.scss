@@ -10,6 +10,7 @@ body {
 }
 
 
+
 ///zmienne globalne 
 $mainFontColor: #FFF7E9;
 $primaryColor: #2F4858;
@@ -194,7 +195,19 @@ td,tr,th{
   
   padding: 0 0 0 0;
 }
-
+// @media all and (max-width:576px){
+//   .treat-list{
+//     ul{
+//       display: block;
+//     }
+//     ul li{
+//       display: inline-block;
+//       margin: 2rem;
+//       width: 27vw;
+//       color:green;
+//     }
+//   }
+// }
 main {
   button {
     border-radius: 10%;
@@ -277,6 +290,74 @@ main {
             margin-top: 2rem;
         }
     }
+
+    .treat-list,
+    .room-list{
+
+      ul{
+        display: flex;
+        flex-wrap: wrap;
+        
+
+        li{
+          width: 100%;
+          margin-bottom: 2vw;
+
+        }
+      }
+      
+    }
+
+    @media only screen and (max-width:576px){
+      .client {
+        width: 50%;
+      }
+    }
+
+    @media only screen and (min-width: 577px) and (max-width: 992px) {
+      .client {
+        width: 50%;
+        
+      }
+      .treat-list,
+      .room-list{
+        ul{
+          display: flex;
+          flex-wrap: wrap;
+          padding: 0 0 0 0;
+          margin: 0 0 0 0;
+  
+          li{
+            width: 45%;
+           margin-right: 10px;
+          margin-bottom: 20px;
+          margin-top: 10px;
+  
+          }
+        }
+      }
+    }
+    @media only screen and (min-width: 993px){
+
+      .treat-list,
+      .room-list{
+      
+        ul{
+          display: flex;
+          flex-wrap: wrap;
+  
+          li{
+            width: calc(100%/3.2);
+            margin-right: 10px;
+            margin-bottom: 20px;
+            margin-top: 10px;
+            }
+        }
+        
+      }
+
+    }
+
     .registrationPanel{
         margin: 0 auto;
         
@@ -335,7 +416,6 @@ main {
       .progress-bar{
           width: 25%;
       }
-
 
         
         .home-inner{
@@ -405,16 +485,7 @@ main {
             }
            
           }
-          @media all and (max-width:576px){
-            .client {
-              width: 50%;
-            }
-          }
-          @media all and (min-width: 768px) and (max-width: 992px) {
-            .client {
-              width: 50%;
-            }
-          }
+
           //contact
           footer,
             footer a {

@@ -12,7 +12,8 @@ export function RoomList() {
     <h2 class = "header">Dostępne pokoje</h2>
     <p class = "header">Sprawdź ofertę pokoi.</p>
     <p class="loading">Ładuję listę pokoi...</p>
-    
+    <div class ="room-list"></div>
+
   `;
 
   // pobieramy liste pokoi z serwera
@@ -52,7 +53,8 @@ export function RoomList() {
       // usuwamy element mowiacy o ladowaniu
       section.querySelector(".loading").remove();
       // podstawiamy gotowa liste z pokojami
-      section.append(ul);
+      //section.append(ul);
+      section.querySelector(".room-list").append(ul);
     });
 
   return section;
